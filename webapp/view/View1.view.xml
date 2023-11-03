@@ -3,7 +3,8 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-        <List id="CompanyList" items="{/ScarrSet}" headerText="{i18n>company_list_header_txt}">
+        <SearchField id="searchFieldCompany"  width="20%" search="onFilterCompanies"></SearchField>
+        <List id="companyList" items="{path: '/ScarrSet', sorter: {path: 'Carrname', descending: true} }" headerText="{i18n>company_list_header_txt}">
         <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active" >
             <ObjectAttribute id="urlAttr" text="{Url}"></ObjectAttribute>
             <ObjectAttribute id="currAttr" text="{Currcode}"></ObjectAttribute>
