@@ -3,7 +3,7 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-         <Input id="companyInput" value="{mainService>/ScarrSet('AA')/Carrname}"></Input>
+         <Input id="companyInput"></Input>
         </content>
     </Page>
 </mvc:View>
