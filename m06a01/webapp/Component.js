@@ -3,10 +3,10 @@
  */
 
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "moovi/m06a01/model/models"
-    ],
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "moovi/m06a01/model/models"
+],
     function (UIComponent, Device, models) {
         "use strict";
 
@@ -29,6 +29,10 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                // Inicialização do modelo "mainService"
+                var oMainServiceModel = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/sap/ZEAT_GW_SRV/");
+                this.setModel(oMainServiceModel, "mainService");
             }
         });
     }

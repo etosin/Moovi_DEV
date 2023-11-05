@@ -7,6 +7,7 @@ sap.ui.define(
   
       return BaseController.extend("moovi.m06a01.controller.App", {
         onInit: function() {
+        
         }
       });
     }
