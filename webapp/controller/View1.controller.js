@@ -12,6 +12,7 @@ sap.ui.define([
         return Controller.extend("moovi.m06a01.controller.View1", {
             onInit: function () {
 
+                
             },
 
             onFilterCompanies: function (oEvent) {
