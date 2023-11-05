@@ -17,7 +17,7 @@ sap.ui.define([
 
             onFilterCompanies: function (oEvent) {
                 
-                let aFilters = [];
+                let aFilters = []; 
                 var sQuery = oEvent.getParameter("query");
 
                 if(sQuery){
