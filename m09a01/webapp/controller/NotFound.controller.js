@@ -1,6 +1,6 @@
 sap.ui.define(
   [
-    "moovi/controller/BaseController"
+    "moovi/m09a01/controller/BaseController"
   ],
   function (Controller) {
     "use strict";

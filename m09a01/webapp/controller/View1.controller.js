@@ -1,5 +1,5 @@
 sap.ui.define([
-    "moovi/controller/BaseController"
+    "moovi/m09a01/controller/BaseController"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
