@@ -1,5 +1,5 @@
 <mvc:View 
-controllerName="moovi.m09a01.controller.NotFound"
+controllerName="moovi.project1.controller.NotFound"
 xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%">
 <MessagePage 
 id="MessageID"

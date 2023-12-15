@@ -17,7 +17,7 @@ sap.ui.define([
                oItem =  oEvent.getSource();
                oCtx = oItem.getBindingContext();
                 this.getRouter().navTo("RouteCompanyDetail", {
-                      carrid: oCtx.getProperty("Carrid")
+                      carrId: oCtx.getProperty("Carrid")
                 });
             }
         });

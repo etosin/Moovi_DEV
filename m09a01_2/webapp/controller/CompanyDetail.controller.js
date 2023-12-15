@@ -5,7 +5,7 @@ sap.ui.define(
     function (Controller) {
       "use strict";
   
-      return Controller.extend("moovi.projec1.controller.CompanyDetail", {
+      return Controller.extend("moovi.project1.controller.CompanyDetail", {
         onInit: function () {
             var oRouter = this.getRouter();
             oRouter.getRoute("RouteCompanyDetail").attachMatched(this.onRouteMatched, this);
@@ -17,7 +17,7 @@ sap.ui.define(
           oView = this.getView();
   
           oView.bindElement({
-            path: "/Scarset('" + oArgs.carrId + "')",
+            path: "/ScarrSet('" + oArgs.carrId + "')",
             events: {
               change: this._oBindingChange.bind(this),
               dataRequested: function (oEvent) {
