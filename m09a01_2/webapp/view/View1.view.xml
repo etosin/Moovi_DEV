@@ -1,10 +1,25 @@
 <mvc:View controllerName="moovi.project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content>
+    <Page id="page" title="{i18n>title}">        
+        <content> 
+
+        <Toolbar id="tool">
+        <Title id="title1" text="Lista"/>        
+        <SearchField id="Serch1" width="50%" search="onFilterFlights"/>
+        </Toolbar>       
+        
         <List id="companyList" items="{path: '/ScarrSet', sorter: {path: 'Carrname', descending: true} }" headerText="{i18n>company_list_header_txt}">
-        <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active" press="onListItemPress">
+        <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active" press="onListItemPress"
+        icon="{
+            path: 'Currcode',
+            formatter: '.formatter.setIconStatusFltime'
+        }">
+        <firstStatus>
+        <ObjectStatus id="objStatus"
+             text="{Currcode}"
+             state="{= ${Currcode} !== 'USD' ? 'Error' : 'Success'}" />
+        </firstStatus>
             <ObjectAttribute id="urlAttr" text="{Url}"></ObjectAttribute>
             <ObjectAttribute id="currAttr" text="{Currcode}"></ObjectAttribute>
         </ObjectListItem>
