@@ -1,5 +1,5 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "moovi/project1/controller/BaseController"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -10,6 +10,15 @@ sap.ui.define([
         return Controller.extend("moovi.project1.controller.View1", {
             onInit: function () {
 
+            },
+
+            onListItemPress: function(oEvent){
+               let oItem, oCtx;
+               oItem =  oEvent.getSource();
+               oCtx = oItem.getBindingContext();
+                this.getRouter().navTo("RouteCompanyDetail", {
+                      carrid: oCtx.getProperty("Carrid")
+                });
             }
         });
     });

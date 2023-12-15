@@ -95,9 +95,16 @@
       "routes": [
         {
           "name": "RouteView1",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetView1"
+          ]
+        },
+        {
+          "name": "RouteCompanyDetail",
+          "pattern": "company/{carrId}",
+          "target": [
+            "TargetCompanyDetail"
           ]
         }
       ],
@@ -108,6 +115,20 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+        "TargetCompanyDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CompanyDetail",
+          "viewName": "CompanyDetail"
+        },
+        "TargetNotFound": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "NotFound",
+          "viewName": "NotFound"
         }
       }
     },

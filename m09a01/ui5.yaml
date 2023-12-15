@@ -17,7 +17,7 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /sap
-            url: http://localhost
+            url: http://roffproj2021.roff.pt:50000
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

@@ -98,14 +98,14 @@
       "routes": [
         {
           "name": "RouteView1",
-          "pattern": "company/{carrId}",
+          "pattern": "",
           "target": [
             "TargetView1"
           ]
         },
         {
           "name": "RouteCompanyDetail",
-          "pattern": "",
+          "pattern": "company/{carrId}",
           "target": [
             "TargetCompanyDetail"
           ]

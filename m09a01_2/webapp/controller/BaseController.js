@@ -7,7 +7,7 @@ sap.ui.define(
     function(Controller, History, UIComponent) {
       "use strict";
   
-      return Controller.extend("moovi.m09a01.controller.BaseController", {
+      return Controller.extend("moovi.project1.controller.BaseController", {
        
         getRouter : function(){
             return UIComponent.getRouterFor(this);
