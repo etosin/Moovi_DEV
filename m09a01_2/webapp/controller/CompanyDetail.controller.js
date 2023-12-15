@@ -24,7 +24,7 @@ sap.ui.define(
                 oView.setBusy(true);
               },
               dataReceived: function (oEvent) {
-                oView.seBusy(false);
+                oView.setBusy(false);
               }
             }
           });
