@@ -14,6 +14,9 @@ sap.ui.define([
 
             formatter: formatter,
             onInit: function () {
+        
+                let varInput = this.byId("searchField");
+                varInput.setProperty("value", 'AA');
 
             },
 

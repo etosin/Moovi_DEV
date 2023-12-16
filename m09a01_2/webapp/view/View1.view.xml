@@ -6,7 +6,7 @@
 
         <Toolbar id="tool">
         <Title id="title1" text="Lista"/>        
-        <SearchField id="Serch1" width="50%" search="onFilterFlights"/>
+        <SearchField id="searchField" width="50%" search="onFilterFlights"/>
         </Toolbar>       
         
         <List id="companyList" items="{path: '/ScarrSet', sorter: {path: 'Carrname', descending: true} }" headerText="{i18n>company_list_header_txt}">
