@@ -18,6 +18,9 @@ sap.ui.define(
         oArgs = oEvent.getParameter("arguments");
         oView = this.getView();
 
+        var oEditModel = this.getView().getModel("editCompanyModel");
+        oEditModel.setProperty("/isNew", false);
+
         if (oArgs.carrId !== "New") {
           oView.bindElement({
             path: "/ScarrSet('" + oArgs.carrId + "')",
