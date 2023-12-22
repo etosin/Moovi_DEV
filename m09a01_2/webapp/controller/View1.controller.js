@@ -41,6 +41,12 @@ sap.ui.define([
                     let oList = this.getView().byId("companyList");
                     let oBinding = oList.getBinding("items");
                     oBinding.filter(aFilter);
-                }
+                },
+                onBtnCreatePress: function(oEvent){
+
+                    this.getRouter().navTo("RouteCompanyDetail",{
+                        carrId: "New"
+                    });
+                }	
         });
     });

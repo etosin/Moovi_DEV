@@ -1,43 +1,55 @@
-<core:FragmentDefinition
+<mvc:View
     controllerName="moovi.project1.controller.CompanyDetail"
-    showNavButton="true"
-    navButtonPress="onNavBack"
-    id="Frag"
-	xmlns="sap.m"
-	xmlns:l="sap.ui.layout"
-	xmlns:f="sap.ui.layout.form"
-	xmlns:core="sap.ui.core">
-	<VBox id="Vbox" class="sapUiSmallMargin">
-		<f:SimpleForm id="SimpleFormChange354"
-		    
-			editable="true"
-			layout="ResponsiveGridLayout"
-			title="Address"
-			labelSpanXL="3"
-			labelSpanL="3"
-			labelSpanM="3"
-			labelSpanS="12"
-			adjustLabelSpan="false"
-			emptySpanXL="4"
-			emptySpanL="4"
-			emptySpanM="4"
-			emptySpanS="0"
-			columnsXL="1"
-			columnsL="1"
-			columnsM="1"
-			singleContainerFullSize="false" >
-			<f:content>
-                <Label id="lb0" text="Company ID" />
-				<Input id="id" value="{Carrid}" />
-				<Label id="lb1" text="Company name" />
-				<Input id="name" value="{Carrname}" />
-				<Label id="lb2" text="Currency Code" />
-				<Input id="curr" value="{Currcode}">
-				</Input>			
-				<Label id="lb3" text="Url" />
-				<Input id="url" value="{Url}">
-				</Input>
-			</f:content>
-		</f:SimpleForm>
-	</VBox>
-</core:FragmentDefinition>
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    busyIndicatorDelay="0">
+    <Page
+        id="companyDetailPage"
+        title="{i18n>CompanyDetailsOf} {Carrname}"
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        class="sapUiResponsiveContentPadding">
+        <content>
+            <Panel
+                id="companyDetailPanel"
+                width="auto"
+                class="sapUiResponsiveMargin sapUiNoContentPadding">
+                <headerToolbar>
+                    <Toolbar id="T1">
+                        <Title text="{i18n>CompanyID} {Carrid}" level="H2"/> 
+                        <ToolbarSpacer id="TS1" />                        
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <f:SimpleForm
+                        id="formEdit"
+                        minWidth="1024"
+                        editable="false"
+                        layout="ResponsiveGridLayout"
+                        labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+                        columnsL="1" columnsM="1">                        
+                        <f:content>
+                        <Label text="{i18n>CompanyID}" />
+                        <Input type="Text"  value="{Carrid}" editable="{editCompanyModel>/isNew}" />     
+
+                        <Label text="{i18n>CompanyName}"/>
+                            <Input type="Text" value="{Carrname}"/>                        
+                            <Label text="{i18n>CurrCode}"/>
+                             <Input type="Text" value="{Currcode}"/>
+                            <Label text="{i18n>Url}"/>
+                             <Input type="Text" value="{Url}"/>                                     
+                        </f:content>
+                    </f:SimpleForm>
+                </content>               
+            </Panel>
+        </content>     
+         <footer>
+                            <OverflowToolbar>
+                                <ToolbarSpacer/>
+                                <Button text="Salvar" type="Accept" press=".onBtnSavePress" />
+                                <Button text="Delete" type="Reject" press=".onBtnDeletePress" />								
+                            </OverflowToolbar>
+           </footer>
+    </Page>
+</mvc:View>

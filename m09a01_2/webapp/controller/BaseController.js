@@ -13,18 +13,18 @@ sap.ui.define(
             return UIComponent.getRouterFor(this);
         },
 
-        onNavBack: function(){
-         var oHistory, sPreviousHash;
+        onNavBack: function () {
+          var oHistory, sPreviousHash;
 
-         oHistory = oHistory.getInstance();
-         sPreviousHash = oHistory.getPreviousHash();
+          oHistory = History.getInstance();
+          sPreviousHash = oHistory.getPreviousHash();
 
-         if (sPreviousHash !== undefined){
-            window.history.go(-1);
-         }else{
-            this.getRouter().navTo("RouteView1", {}, true /*no history*/);
-         }
-        }
+          if (sPreviousHash !== undefined) {
+              window.history.go(-1);
+          } else {
+              this.getRouter().navTo("RouteView1", {}, true /*no history*/);
+          }
+        } 
       });
     }
   );

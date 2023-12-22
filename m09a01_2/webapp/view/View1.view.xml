@@ -10,6 +10,13 @@
         </Toolbar>       
         
         <List id="companyList" items="{path: '/ScarrSet', sorter: {path: 'Carrname', descending: true} }" headerText="{i18n>company_list_header_txt}">
+        <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{i18n>company_list_header_txt}" level="H2" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://create" text="Novo" press=".onBtnCreatePress" />
+                    </OverflowToolbar>
+                </headerToolbar>
         <ObjectListItem id="scarrObjLstItem" title="{Carrname}" type="Active" press="onListItemPress"
         icon="{
             path: 'Currcode',
