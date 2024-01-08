@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: moovi.zetosin
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: ROFF
+          url: http://roffproj2021.roff.pt:50000
+        app:
+          name: ZEAT_APP
+          package: Z001
+          transport: S4HK901984
+        exclude:
+          - /test/
